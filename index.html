@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e8e7df" />
+  <link rel="icon" href="data:," />
+  <title>softloop — an ambient pocket instrument</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="instrument" aria-label="Softloop ambient music instrument">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Softloop home"><span class="brand-mark"><i></i><i></i><i></i></span>softloop<span class="brand-dot">.</span></a>
+      <div class="top-caption"><span class="tiny-led"></span> POCKET AMBIENCE MACHINE <span class="top-divider">/</span> NO. 01</div>
+      <button class="help-button" id="helpButton" aria-label="How to use Softloop">?</button>
+    </header>
+
+    <section class="intro" aria-labelledby="pageTitle">
+      <div class="eyebrow">A LITTLE SPACE TO LISTEN</div>
+      <h1 id="pageTitle">Make room for <em>quiet.</em></h1>
+      <p>Layer a few little sounds. Let them find their rhythm.</p>
+    </section>
+
+    <section class="machine" aria-label="Sound mixer">
+      <div class="machine-screws" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="machine-head">
+        <div class="device-label"><span class="label-icon">S</span><span>SOFTLOOP <small>FIELD RECORDER / 01</small></span></div>
+        <div class="session-pill"><span class="session-led" id="sessionLed"></span><span id="sessionStatus">READY TO PLAY</span></div>
+      </div>
+
+      <section class="visualizer" id="visualizer" aria-label="Sound visualizer">
+        <div class="screen-grain"></div>
+        <div class="screen-topline"><span>LISTENING SPACE</span><span id="clockDisplay">00 : 00</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="visual-core" id="visualCore"><span class="core-center"></span></div>
+        <div class="wave wave-a"></div><div class="wave wave-b"></div>
+        <div class="screen-bottomline"><span id="screenMessage">tap a sound to begin</span><span class="meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      </section>
+
+      <div class="section-heading">
+        <div><span class="section-kicker">01 / THE INGREDIENTS</span><h2>Choose your sounds</h2></div>
+        <div class="active-count"><span id="activeCount">00</span><small>LAYERS</small></div>
+      </div>
+
+      <section class="pad-grid" aria-label="Sound pads">
+        <button class="sound-pad rain" data-sound="rain" aria-pressed="false" aria-label="Toggle Rain sound">
+          <span class="pad-top"><span class="pad-number">01</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-rain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><b></b></span>
+          <span class="pad-info"><span><strong>Rain</strong><small>SOFT / WINDOW</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+        <button class="sound-pad wind" data-sound="wind" aria-pressed="false" aria-label="Toggle Wind sound">
+          <span class="pad-top"><span class="pad-number">02</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-wind" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="pad-info"><span><strong>Wind</strong><small>LOW / OPEN AIR</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+        <button class="sound-pad birds" data-sound="birds" aria-pressed="false" aria-label="Toggle Birds sound">
+          <span class="pad-top"><span class="pad-number">03</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-birds" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+          <span class="pad-info"><span><strong>Birds</strong><small>MORNING / GARDEN</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+        <button class="sound-pad paper" data-sound="paper" aria-pressed="false" aria-label="Toggle Crumpled Paper sound">
+          <span class="pad-top"><span class="pad-number">04</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-paper" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+          <span class="pad-info"><span><strong>Paper</strong><small>CRINKLE / CLOSE UP</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+        <button class="sound-pad bubbles" data-sound="bubbles" aria-pressed="false" aria-label="Toggle Bubbles sound">
+          <span class="pad-top"><span class="pad-number">05</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-bubbles" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+          <span class="pad-info"><span><strong>Bubbles</strong><small>WATER / SLOW</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+        <button class="sound-pad vinyl" data-sound="vinyl" aria-pressed="false" aria-label="Toggle Vinyl Crackle sound">
+          <span class="pad-top"><span class="pad-number">06</span><span class="pad-status"><i></i>OFF</span></span>
+          <span class="sound-art art-vinyl" aria-hidden="true"><i></i><i></i><i></i><b></b></span>
+          <span class="pad-info"><span><strong>Vinyl</strong><small>WARM / TEXTURE</small></span><span class="pad-glyph">↗</span></span>
+        </button>
+      </section>
+
+      <div class="control-divider"><span>02 / SHAPE THE SPACE</span><i></i><span>TURN TO ADJUST</span></div>
+      <section class="controls" aria-label="Sound controls">
+        <div class="control-module">
+          <div class="knob-wrap"><button class="knob" data-control="reverb" role="slider" aria-label="Reverb" aria-valuemin="0" aria-valuemax="100" aria-valuenow="32" tabindex="0"><span class="knob-indicator"></span><span class="knob-cap"></span></button><span class="knob-shadow"></span></div>
+          <div class="control-label"><strong>Reverb</strong><small>ROOM SIZE</small></div><span class="control-value" id="reverbValue">32%</span>
+        </div>
+        <div class="control-module">
+          <div class="knob-wrap"><button class="knob" data-control="delay" role="slider" aria-label="Delay" aria-valuemin="0" aria-valuemax="100" aria-valuenow="18" tabindex="0"><span class="knob-indicator"></span><span class="knob-cap"></span></button><span class="knob-shadow"></span></div>
+          <div class="control-label"><strong>Delay</strong><small>ECHO / FEEDBACK</small></div><span class="control-value" id="delayValue">18%</span>
+        </div>
+        <div class="control-module tempo-module">
+          <div class="knob-wrap"><button class="knob tempo-knob" data-control="tempo" role="slider" aria-label="Master tempo" aria-valuemin="60" aria-valuemax="140" aria-valuenow="84" tabindex="0"><span class="knob-indicator"></span><span class="knob-cap"></span></button><span class="knob-shadow"></span></div>
+          <div class="control-label"><strong>Tempo</strong><small>MASTER SPEED</small></div><span class="control-value" id="tempoValue">84 <small>BPM</small></span>
+        </div>
+        <div class="control-module volume-module">
+          <button class="volume-button" id="volumeButton" aria-label="Mute master volume" aria-pressed="false"><span class="volume-icon">◖</span></button>
+          <div class="control-label"><strong>Master</strong><small>OUTPUT LEVEL</small></div><span class="control-value">ON</span>
+        </div>
+      </section>
+
+      <footer class="machine-footer"><span><i class="footer-dot"></i> BUILT FOR SLOW MOMENTS</span><span>MADE WITH CARE <b>♥</b></span></footer>
+    </section>
+    <p class="page-footnote">Best enjoyed with headphones <span>·</span> Use the knobs by dragging, scrolling, or tapping the sides</p>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="helpModal" hidden>
+      <div class="help-card" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+        <button class="modal-close" id="closeHelp" aria-label="Close help">×</button><span class="section-kicker">A NOTE BEFORE YOU BEGIN</span><h2 id="helpTitle">A tiny instrument<br>for a softer day.</h2>
+        <p>Tap the sound pads to layer a little atmosphere. Each sound joins on the next beat, so everything stays in time. Turn the knobs to shape the room or slow the whole thing down.</p>
+        <p class="help-foot">Your browser may ask permission to start audio. Nothing is recorded or sent anywhere.</p><button class="got-it" id="gotIt">GOT IT <span>→</span></button>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
